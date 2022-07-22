@@ -1,12 +1,16 @@
-const screen = document.querySelector('calc-screen');
-const buttons = document.querySelectorAll('button');
+const screen = document.querySelector('.calc-screen');
+const buttons = document.querySelectorAll('.button');
 
 buttons.forEach(button => {
     button.addEventListener('click', getInput);
 });
 
+let lastValue;
+
 function getInput(e) {
-    let clickedButton = e.target.innerText;
+    let clickedButton = e.target;
+    //console.log();
+    lastValue = clickedButton;
     outputScreen(clickedButton);
 }
 
@@ -16,18 +20,18 @@ function outputScreen(userSelection) {
 
 
 function operate(operator, a, b) {
-    let a = Number(a);
-    let b = Number(b);
+    a = Number(a);
+    b = Number(b);
     switch (operator) {
         case '+':
             return add(a, b)
-        case '−':
+        case '-':
             return subtract(a, b)
-        case '×':
+        case 'x':
             return multiply(a, b)
-        case '÷':
+        case '/':
             if (b === 0) return null
-            else return divide(a, b)
+            return divide(a, b)
         default:
           return null;
     };
