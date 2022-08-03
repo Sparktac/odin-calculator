@@ -29,19 +29,36 @@ function getInput(e) {
         lastValue = clickedButton;
     }
 
+    outputScreen(lastValue);
+
     if (isEquals(clickedButton) == true) {
         let result = operate(savedOperator, firstSet, secondSet);
-        console.log(result);
+        outputScreen(result);
     }
-
-    console.log(firstSet, secondSet);
-    outputScreen(lastValue);
 };
 
-function outputScreen(userSelection) {
-    screen.innerText = userSelection;
+function outputScreen(result) {
+    screen.innerText = result;
 };
 
+function lastScreen() {
+    return lastValue;
+}
+
+function currentScreen() {
+    return currentButton;
+}
+
+function clearScreen() {
+    screen.innerText = '';
+    //firstSet = 0;
+    //secondSet = 0;
+    lastValue = '';
+}
+
+// function deleteLast() {
+
+// }
 
 function calculateInput(currentButton) {
     console.log(lastValue);

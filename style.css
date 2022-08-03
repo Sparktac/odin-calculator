@@ -26,13 +26,13 @@ main {
     justify-content: center;
     align-items: center;
     height: 75vh;
-    min-height: 500px;
+    min-height: 5rem;
     padding: 10px;
 }
 
 header {
     background-color: rgb(65, 75, 75);
-    height: 50px;
+    height: 4rem;
 }
 body {
     background-color: rgb(65, 65, 65);
@@ -46,14 +46,14 @@ body {
     border: 2px var(--border) solid;
     border-radius: 15px;
     background-color: rgb(148, 145, 145);
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .calc-screen {
     text-align: right;
     font-size: 40px;
     grid-column: span 4;
-    height: 100px;
+    height: 6rem;
     padding: 10px;
     background-color: rgb(75, 75, 75);
     margin-bottom: 20px;
@@ -82,6 +82,24 @@ body {
     border-radius: 5px;
     background-color: rgb(75, 75, 75);
     cursor: pointer;
+    transition: all .2s ease-in-out;
+    box-shadow: -1px 1px rgb(32, 32, 32);
+}
+
+.button:hover {
+    transform: translateY(-0.2rem);
+}
+
+.button:active {
+    transform: translateY(0rem);
+}
+
+.operator:hover {
+    background-color: rgb(40, 165, 165);
+}
+
+.equals:hover {
+    background-color: rgb(30, 120, 30);
 }
 
 .btn-red {
@@ -89,7 +107,7 @@ body {
 }
 
 .btn-blue {
-    background-color: #566;
+    background-color: #666677;
 }
 .btn-blue:hover {
     background-color: rgb(15, 15, 90);
@@ -106,7 +124,7 @@ footer {
     align-items: flex-end;
     gap: 10px;
     width: 100%;
-    height: 100px;
+    height: 6rem;
     padding: 10px;
     font-size: 20px;
     background-color: rgb(65, 75, 75);
