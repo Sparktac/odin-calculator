@@ -1,6 +1,15 @@
+:root {
+    --border: #333;
+}
+
 html {
     position: relative;
     min-height: 100%;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: underline;
 }
 
 *,
@@ -9,6 +18,7 @@ html {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  color: white;
 }
 
 main {
@@ -18,25 +28,36 @@ main {
     height: 75vh;
     min-height: 500px;
     padding: 10px;
-    margin-top: 50px;
 }
 
+header {
+    background-color: rgb(65, 75, 75);
+    height: 50px;
+}
+body {
+    background-color: rgb(65, 65, 65);
+    margin-bottom: 50px;
+}
 .calc-main {
     display: flex;
-    justify-content: row;
-    align-items: space-evenly;
+    flex-direction: column;
     width: 400px;
-    padding: 50px;
-    margin: 10px;
-    border: 2px solid #333;
+    padding: 30px;
+    border: 2px var(--border) solid;
     border-radius: 15px;
+    background-color: rgb(148, 145, 145);
+    margin-top: 50px;
 }
 
 .calc-screen {
     text-align: right;
-    padding: 10px 20px;
+    font-size: 40px;
+    grid-column: span 4;
+    height: 100px;
+    padding: 10px;
+    background-color: rgb(75, 75, 75);
     margin-bottom: 20px;
-    border:  2px solid #333;
+    border: 2px solid #333;
     border-radius: 5px;
     word-wrap: break-word;
     word-break: break-all;
@@ -46,6 +67,7 @@ main {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
+    height: 100%;
 
 }
 
@@ -55,9 +77,22 @@ main {
 
 .button {
     text-align: center;
-    padding: 5px;
+    padding: 20px 15px;
     border: 2px solid #333;
     border-radius: 5px;
+    background-color: rgb(75, 75, 75);
+    cursor: pointer;
+}
+
+.btn-red {
+    background-color: darkred;
+}
+
+.btn-blue {
+    background-color: #566;
+}
+.btn-blue:hover {
+    background-color: rgb(15, 15, 90);
 }
 
 
@@ -67,10 +102,12 @@ footer {
     bottom: 0;
     left: 0;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: flex-end;
     gap: 10px;
     width: 100%;
+    height: 100px;
     padding: 10px;
     font-size: 20px;
+    background-color: rgb(65, 75, 75);
   }
