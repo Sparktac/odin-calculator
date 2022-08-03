@@ -5,7 +5,7 @@
 html {
     position: relative;
     min-height: 100%;
-    font-size: 18px;
+    font-size: 20px;
 }
 
 a {
@@ -129,3 +129,12 @@ footer {
     font-size: 20px;
     background-color: rgb(65, 75, 75);
   }
+
+.github {
+    width: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.github:hover {
+    transform: rotate(360deg) scale(1.2);
+}

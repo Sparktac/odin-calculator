@@ -6,6 +6,7 @@
     <title>Calculator</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' href='style.css'>
+    <link rel="icon" type="image/x-icon" href="/images/calculator24px.png">
     <script src='script.js' defer></script>
 </head>
 
@@ -43,7 +44,15 @@
     </main>
 
     <footer>
-        <span>Copyright &copy; 2022 <a href="https://github.com/Sparktac" target="_blank">Sparktac</a></span>
+        <span>Copyright &copy;
+            <script>
+                document.write(new Date().getFullYear())
+            </script>
+            <em>Sparktac</em>
+        </span>
+        <a href="https://github.com/Sparktac" target="_blank">
+            <img class="github" src="/images/github32px.png" alt="Github icon"></img>
+        </a>
     </footer>
 </body>
 
