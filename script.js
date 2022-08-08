@@ -50,7 +50,7 @@ function currentScreen() {
 }
 
 function clearScreen() {
-    screen.innerText = '';
+    screen.innerText = 0;
     //firstSet = 0;
     //secondSet = 0;
     lastValue = '';
@@ -95,8 +95,9 @@ function isOperator(value) {
 // function clearScreen() {
 //     screen.innerText = '';
 // };
-// HELPER FUNCTIONS
 
+
+// HELPER FUNCTIONS
 function add(a, b) {
 	return a + b;
 };
