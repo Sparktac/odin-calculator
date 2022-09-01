@@ -46,23 +46,37 @@ body {
     width: 400px;
     padding: 30px;
     border: 2px var(--border) solid;
-    border-radius: 15px;
+    border-radius: 5px;
     background-color: rgb(148, 145, 145);
 }
 
-.calc-screen {
+.screen-equation {
     text-align: right;
-    font-size: 40px;
+    font-size: 36px;
     grid-column: span 4;
-    height: 6rem;
+    height: 3rem;
     padding: 10px;
     background-color: rgb(75, 75, 75);
-    margin-bottom: 20px;
-    border: 2px solid #333;
-    border-radius: 5px;
+    border: 2px var(--border) solid;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
     word-wrap: break-word;
     word-break: break-all;
-    
+}
+
+.screen-result {
+    text-align: right;
+    font-size: 36px;
+    grid-column: span 4;
+    height: 3rem;
+    padding: 10px;
+    background-color: rgb(75, 75, 75);
+    border: 2px var(--border) solid;
+    border-top: none;
+    border-radius: 0 0 5px 5px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 .buttons-grid {
